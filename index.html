@@ -3,71 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Newspaper</title>
+    <title>Inspire Hub</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <!-- Header -->
     <header>
-        <h1>The Daily School News</h1>
-        <div class="nav-buttons">
-            <button onclick="showContent('all')">Home</button>
+        <h1>Inspire Hub</h1>
+        <nav>
+            <button onclick="showContent('home')">Home</button>
             <button onclick="showContent('activities')">Activities</button>
             <button onclick="showContent('achievements')">Achievements</button>
             <button onclick="showContent('campaigns')">Awareness Campaigns</button>
             <button onclick="showContent('ib')">More About IB</button>
-            <button onclick="openLoginPanel()">Admin Panel</button>
-        </div>
+            <button onclick="showContent('reflection')">Reflection</button>
+            <button onclick="openAdminPanel()">Admin Panel</button>
+        </nav>
     </header>
 
-    <!-- Main Content Area -->
+    <!-- Main Content -->
     <main id="content">
-        <p>Welcome to the School Newspaper! Select a category to view content.</p>
+        <p>Welcome to Inspire Hub! Navigate using the buttons above.</p>
     </main>
-
-    <!-- Admin Login Modal -->
-    <div id="adminLogin" class="modal">
-        <div class="modal-content">
-            <h2>Admin Login</h2>
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
-            <button onclick="login()">Login</button>
-            <button onclick="closeLoginPanel()">Cancel</button>
-        </div>
-    </div>
 
     <!-- Admin Panel Modal -->
     <div id="adminPanel" class="modal">
         <div class="modal-content">
             <h2>Admin Panel</h2>
+            <label for="categorySelect">Select Category:</label>
             <select id="categorySelect">
                 <option value="activities">Activities</option>
                 <option value="achievements">Achievements</option>
                 <option value="campaigns">Awareness Campaigns</option>
                 <option value="ib">More About IB</option>
+                <option value="reflection">Reflection</option>
             </select>
-            <input type="text" id="titleInput" placeholder="Title">
-            <textarea id="descriptionInput" placeholder="Description"></textarea>
+            <input type="text" id="titleInput" placeholder="Enter Title">
+            <textarea id="descriptionInput" placeholder="Enter Description"></textarea>
             <button onclick="addContent()">Add Content</button>
             <button onclick="closeAdminPanel()">Close</button>
-            <h3>Delete Content</h3>
-            <ul id="contentList"></ul>
         </div>
     </div>
 
     <!-- Comments Section -->
     <section id="commentsSection">
-        <h3>Comments</h3>
-        <textarea id="commentBox" placeholder="Share your experience and thoughts with us!"></textarea>
-        <button onclick="submitComment()">Add Comment</button>
+        <h2>Comments</h2>
+        <textarea id="commentInput" placeholder="Write a comment..."></textarea>
+        <button onclick="addComment()">Submit</button>
         <div id="commentsList"></div>
     </section>
 
-    <!-- Footer with Contact Information -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 School Newspaper. All rights reserved.</p>
-        <p>Contact: <a href="https://instagram.com/ib.stress.express" target="_blank">@ib.stress.express</a> | +961 76 461 879</p>
+        <p>&copy; 2025 Inspire Hub. All rights reserved.</p>
+        <p>Contact: <a href="https://instagram.com/lho_oman" target="_blank">@lho_oman</a> | <a href="https://instagram.com/ib.stresss.expresss" target="_blank">@ib.stresss.expresss</a></p>
     </footer>
 
     <script src="script.js"></script>
